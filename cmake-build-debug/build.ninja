@@ -79,6 +79,12 @@ build CMakeFiles/l1.dir/Villain.cpp.obj: CXX_COMPILER__l1_unscanned_Debug C$:/Us
   OBJECT_DIR = CMakeFiles\l1.dir
   OBJECT_FILE_DIR = CMakeFiles\l1.dir
 
+build CMakeFiles/l1.dir/Hero.cpp.obj: CXX_COMPILER__l1_unscanned_Debug C$:/Users/Nikita/CLionProjects/l1/Hero.cpp || cmake_object_order_depends_target_l1
+  DEP_FILE = CMakeFiles\l1.dir\Hero.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\l1.dir
+  OBJECT_FILE_DIR = CMakeFiles\l1.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target l1
@@ -87,7 +93,7 @@ build CMakeFiles/l1.dir/Villain.cpp.obj: CXX_COMPILER__l1_unscanned_Debug C$:/Us
 #############################################
 # Link the executable l1.exe
 
-build l1.exe: CXX_EXECUTABLE_LINKER__l1_Debug CMakeFiles/l1.dir/main.cpp.obj CMakeFiles/l1.dir/Keeper.cpp.obj CMakeFiles/l1.dir/Monster.cpp.obj CMakeFiles/l1.dir/PositiveHero.cpp.obj CMakeFiles/l1.dir/Villain.cpp.obj
+build l1.exe: CXX_EXECUTABLE_LINKER__l1_Debug CMakeFiles/l1.dir/main.cpp.obj CMakeFiles/l1.dir/Keeper.cpp.obj CMakeFiles/l1.dir/Monster.cpp.obj CMakeFiles/l1.dir/PositiveHero.cpp.obj CMakeFiles/l1.dir/Villain.cpp.obj CMakeFiles/l1.dir/Hero.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\l1.dir

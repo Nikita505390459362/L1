@@ -2,37 +2,29 @@
 #define HERO_H
 
 #include <string>
-#include <iostream>
 
 class Hero {
 protected:
-    std::string name;
-    std::string weaponType;
-    std::string skills[5]; // Сделать выбор количества навыков меню
-    int skillCount; // Количество текущих навыков
+    std::string* skills;
+    int skillsCount;
+    int skillsCapacity;
+
+    void expandSkills();
 
 public:
-    Hero(const std::string& name, const std::string& weaponType, const std::string skills[], int skillCount)
-        : name(name), weaponType(weaponType), skillCount(skillCount) {
-        for (int i = 0; i < skillCount && i < 5; ++i) {
-            this->skills[i] = skills[i];
-        }
-    }
+    Hero();
+    virtual ~Hero();
 
-    virtual ~Hero() = default;
+    virtual void setSkills(const std::string& skills) = 0;
+    virtual std::string* getSkills() const = 0;
+    virtual int getSkillsCount() const = 0;
 
     virtual void printInfo() const = 0;
     virtual std::string serialize() const = 0;
+    virtual std::string getInfoForClipboard() const = 0;
 
-    std::string getName() const { return name; }
-    std::string getWeaponType() const { return weaponType; }
-
-
-    void printSkills() const {
-        for (int i = 0; i < skillCount; ++i) {
-            std::cout << skills[i] << (i < skillCount - 1 ? ", " : "");
-        }
-    }
+    virtual void setName(const std::string& name) = 0;
+    virtual std::string getName() const = 0;
 };
 
 #endif // HERO_H

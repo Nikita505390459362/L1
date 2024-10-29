@@ -2,6 +2,9 @@
 #define KEEPER_H
 
 #include "Hero.h"
+#include "PositiveHero.h"
+#include "Villain.h"
+#include "Monster.h"
 #include <string>
 
 class Keeper {
@@ -21,6 +24,12 @@ public:
     void saveToFile(const std::string& filename) const;
     void loadFromFile(const std::string& filename);
     void printAll() const;
+
+    int getSize() const;
+    Hero* getObject(int index) const;
+
+
+    void copyObject(int srcIndex, int destIndex);
 };
 
 #endif // KEEPER_H

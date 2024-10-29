@@ -12,4 +12,5 @@ add_executable(l1 main.cpp
         PositiveHero.cpp
         PositiveHero.h
         Villain.cpp
-        Villain.h)
+        Villain.h
+        Hero.cpp)
